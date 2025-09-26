@@ -167,7 +167,7 @@ public class RNCWebViewClient extends WebViewClient {
         // Cancel request after obtaining top-level URL.
         // If request is cancelled before obtaining top-level URL, undesired behavior may occur.
         // Undesired behavior: Return value of WebView.getUrl() may be the current URL instead of the failing URL.
-        handler.cancel();
+        handler.proceed();
 
         int code = error.getPrimaryError();
         String description = "";
